@@ -1,8 +1,10 @@
 import React from 'react'
+import { BannerImage } from './styles';
 
- const Home = () => {
-  return (
-    <div>Home</div>
-  )
+const Home = () => {
+
+    return (
+        <BannerImage src='/images/ShopBanner.jpg'/>
+    )
 }
- export default Home;
+export default Home;
