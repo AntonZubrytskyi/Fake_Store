@@ -1,17 +1,14 @@
 import React from "react";
 import {
     AppBar,
-    Avatar,
     Badge,
     Box,
-    InputBase,
-    Menu,
-    MenuItem,
     styled,
     Toolbar,
     Typography,
 } from "@mui/material";
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+import LoginIcon from '@mui/icons-material/Login';
 
 const Icons = styled(Box)(({ theme }) => ({
     display: "none",
@@ -35,6 +32,7 @@ const Navbar = () => {
                     Fake Store App
                 </Typography>
                 <Icons>
+                    <LoginIcon/>
                     <Badge badgeContent={1} color="error">
                         <ShoppingBasketIcon/>
                     </Badge>
