@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import LoginIcon from '@mui/icons-material/Login';
+import {useNavigate} from 'react-router-dom'
 
 const Icons = styled(Box)(({ theme }) => ({
     display: "none",
@@ -25,16 +26,18 @@ const StyledToolbar = styled(Toolbar)({
 
 const Navbar = () => {
 
+    const navigate = useNavigate()
+
     return (
         <AppBar position="sticky">
             <StyledToolbar>
-                <Typography variant="h6">
+                <Typography onClick={() => navigate('/')}  variant="h6">
                     Fake Store App
                 </Typography>
                 <Icons>
-                    <LoginIcon/>
+                    <LoginIcon onClick={()=>navigate('/login')}/>
                     <Badge badgeContent={1} color="error">
-                        <ShoppingBasketIcon/>
+                        <ShoppingBasketIcon onClick={() => navigate('/cart')} />
                     </Badge>
                 </Icons>
             </StyledToolbar>
