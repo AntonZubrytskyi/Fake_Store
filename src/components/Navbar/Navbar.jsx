@@ -26,7 +26,7 @@ const StyledToolbar = styled(Toolbar)({
 const Navbar = () => {
 
     return (
-        <AppBar >
+        <AppBar position="sticky">
             <StyledToolbar>
                 <Typography variant="h6">
                     Fake Store App
