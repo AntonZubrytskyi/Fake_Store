@@ -4,6 +4,7 @@ import {
     Badge,
     Typography,
 } from "@mui/material";
+import {useNavigate} from 'react-router-dom'
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import LoginIcon from '@mui/icons-material/Login';
 import { Icons, StyledToolbar } from "./styles";
@@ -12,16 +13,18 @@ import { Icons, StyledToolbar } from "./styles";
 
 const Navbar = () => {
 
+    const navigate = useNavigate()
+
     return (
-        <AppBar >
+        <AppBar position="sticky">
             <StyledToolbar>
-                <Typography variant="h6">
+                <Typography onClick={() => navigate('/')}  variant="h6">
                     Fake Store App
                 </Typography>
                 <Icons>
-                    <LoginIcon/>
+                    <LoginIcon onClick={()=>navigate('/login')}/>
                     <Badge badgeContent={1} color="error">
-                        <ShoppingBasketIcon/>
+                        <ShoppingBasketIcon onClick={() => navigate('/cart')} />
                     </Badge>
                 </Icons>
             </StyledToolbar>
